@@ -15,10 +15,16 @@ namespace PostalCode.Controllers
 
             return View(lp.LoadFirstList());
         }
-        public ActionResult Details(int id)
+      /*  public ActionResult Details(int id)
         {
             PostalCode.Models.LoadPage lp = new PostalCode.Models.LoadPage();
             return View(lp.LoadByState(id));
+        }*/
+
+        public ActionResult Details(string name)
+        {
+            PostalCode.Models.LoadPage lp = new PostalCode.Models.LoadPage();
+            return View(lp.LoadByStateName(name));
         }
     }
 }

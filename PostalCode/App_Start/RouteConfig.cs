@@ -12,10 +12,10 @@ namespace PostalCode
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.MapRoute(
+           routes.MapRoute(
            name: "State",
-           url: "state/{id}",
-           defaults: new { controller = "States", action = "Index" }
+           url: "state/{name}",
+           defaults: new { controller = "States", action = "Details",name = UrlParameter.Optional }
        );
             routes.MapRoute(
                 name: "Default",
